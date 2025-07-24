@@ -29,7 +29,7 @@ class SimpleTokenizerV1:
             if tok in self.str_to_int:
                 ids.append(self.str_to_int[tok])
             else:
-                print(f"Warning: 未知 token ‘{tok}’，使用 <unk>")
+                print(f"Warning: 未知 token ‘{tok}’，使用 <unk>")  # 这里用正常的中文
                 ids.append(self.str_to_int.get("<unk>"))
         return ids
 
